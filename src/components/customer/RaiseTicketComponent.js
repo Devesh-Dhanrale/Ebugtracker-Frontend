@@ -27,7 +27,7 @@ export default class RaiseTicketComponent extends Component {
 
     findCustomerBycustomerTicketId = (customerTicketId) => {
 
-        axios.get("http://localhost:6060/api/customers/" + customerTicketId)
+        axios.get("http://ec2-54-160-224-255.compute-1.amazonaws.com:6060/api/customers/" + customerTicketId)
             .then(response => {
                 if (response.data != null) {
                     this.setState({
@@ -47,7 +47,7 @@ export default class RaiseTicketComponent extends Component {
             bugTitle: this.state.bugTitle, bugDescription: this.state.bugDescription,
             criticalLevel: this.state.criticalLevel, bugStatus: this.state.bugStatus
         };
-        axios.post('http://localhost:6060/api/raise/' + customerTicketId, bug)
+        axios.post('http://ec2-54-160-224-255.compute-1.amazonaws.com:6060/api/raise/' + customerTicketId, bug)
             .then(response => {
                 this.setState({ message: 'Ticket added Successfully' });
                 this.props.history.push('/viewCustomer');

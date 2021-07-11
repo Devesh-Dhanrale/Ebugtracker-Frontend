@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = "http://localhost:6060/api/staffLogin";
+const baseUrl = "http://ec2-54-160-224-255.compute-1.amazonaws.com:6060/api/staffLogin";
 
 class StaffLoginService {
 
@@ -11,7 +11,7 @@ class StaffLoginService {
 
     getDetailsById(bugId)
     {
-        return axios.get("http://localhost:6060/api/bugs/"+ bugId);
+        return axios.get("http://ec2-54-160-224-255.compute-1.amazonaws.com:6060/api/bugs/"+ bugId);
     }
 }
 

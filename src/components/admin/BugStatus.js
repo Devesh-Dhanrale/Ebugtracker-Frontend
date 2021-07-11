@@ -13,7 +13,7 @@ class BugStatus extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:6060/api/viewBugStatus")
+        axios.get("http://ec2-54-160-224-255.compute-1.amazonaws.com:6060/api/viewBugStatus")
             .then(response => response.data)
             .then((data) => {
                 this.setState({workStatus: data});

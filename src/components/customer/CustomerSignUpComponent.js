@@ -51,7 +51,7 @@ class CustomerSignUpComponent extends Component {
 
     console.log(this.state)
     console.log(this.state)
-    axios.post('http://localhost:6060/api/signup/customers', this.state)
+    axios.post('http://ec2-54-160-224-255.compute-1.amazonaws.com:6060/api/signup/customers', this.state)
       .then(response => {
         console.log(response)
         alert("Sign In Successfully")

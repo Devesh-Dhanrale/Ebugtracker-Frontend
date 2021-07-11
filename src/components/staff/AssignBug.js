@@ -39,7 +39,7 @@ export default class AssignBug extends Component {
 
     findBugById = (bugId) => {
 
-        axios.get("http://localhost:6060/api/bugs/" + bugId)
+        axios.get("http://ec2-54-160-224-255.compute-1.amazonaws.com:6060/api/bugs/" + bugId)
             .then(response => {
                 if (response.data != null) {
                     this.setState({
@@ -67,7 +67,7 @@ export default class AssignBug extends Component {
         var bugId = this.state.bugId;
         var staffId = this.state.staffId;
 
-        axios.put("http://localhost:6060/api/assign/" + staffId + "/" + bugId)
+        axios.put("http://ec2-54-160-224-255.compute-1.amazonaws.com:6060/api/assign/" + staffId + "/" + bugId)
             .then(response => {
                 if (response.data != null) {
                     this.setState({ "show": true });

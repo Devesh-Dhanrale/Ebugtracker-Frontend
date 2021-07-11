@@ -22,7 +22,7 @@ export default class CustomerBug extends Component {
     };
 
     componentDidMount() {
-        axios.get("http://localhost:6060/api/bugs")
+        axios.get("http://ec2-54-160-224-255.compute-1.amazonaws.com:6060/api/bugs")
             .then(response => response.data)
             .then((data) => {
                 this.setState({ bugs: data });

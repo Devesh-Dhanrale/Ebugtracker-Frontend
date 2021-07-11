@@ -18,7 +18,7 @@ export default class ViewCustomerDetailsComponent extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:6060/api/allCustomers")
+        axios.get("http://ec2-54-160-224-255.compute-1.amazonaws.com:6060/api/allCustomers")
             .then(response => response.data)
             .then((data) => {
                 this.setState({ customers: data });

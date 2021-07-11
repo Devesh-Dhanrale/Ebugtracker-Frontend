@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BUG_API_BASE_URL = "http://localhost:6060/api/bugs";
+const BUG_API_BASE_URL = "http://ec2-54-160-224-255.compute-1.amazonaws.com:6060/api/bugs";
 
 class BugService{
    viewAllBugs()
